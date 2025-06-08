@@ -1,0 +1,62 @@
+================================================================================
+                            Vanish++ License
+================================================================================
+
+This license governs the use of the compiled binary (.jar file) of the Vanish++
+plugin (hereafter "the Software"). The source code is private and proprietary.
+
+By downloading, installing, or using the Software, you agree to the following
+terms:
+
+
+1.  GRANT OF LICENSE
+--------------------
+The copyright holder (TheCommandCraft, hereafter "the Author") grants you a
+free-of-charge, non-exclusive, non-transferable right to download, install,
+and use the Software on any number of Minecraft servers that you own or
+operate.
+
+
+2.  RESTRICTIONS
+----------------
+You are expressly forbidden from doing any of the following, unless explicitly
+granted written permission by the Author:
+
+  a.  DECOMPILING AND MODIFYING: You may not decompile, reverse-engineer,
+      disassemble, or otherwise attempt to derive the source code of the
+      Software. You may not modify the compiled .jar file unless explicitly
+      allowed.
+
+  b.  REDISTRIBUTION: You may not redistribute, re-upload, share, or make
+      the Software available on any other website, platform, or file-hosting
+      service. All official downloads must come directly from the Author's
+      designated platform (e.g., the official GitHub Releases page).
+
+  c.  SELLING: You may not sell, rent, lease, or charge for access to the
+      Software itself.
+
+  d.  REMOVING NOTICES: You may not remove or alter any copyright or license
+      notices contained within the Software.
+
+
+3.  WARRANTY & LIABILITY
+------------------------
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+4.  TERMINATION
+---------------
+This license is effective until terminated. Your rights under this license
+will terminate automatically without notice from the Author if you fail to
+comply with any of its terms. Upon termination, you must cease all use and
+destroy all copies of the Software.
+
+================================================================================
+Copyright (c) 2025 TheCommandCraft - All Rights Reserved
+================================================================================
