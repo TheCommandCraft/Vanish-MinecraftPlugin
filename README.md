@@ -1,7 +1,9 @@
 # Vanish++
 <div align="center">
 
-**The ultimate vanish solution for modern Minecraft servers.**
+## 👻 The Absolute Standard for Modern Admin Stealth.
+
+**Stop getting caught. Start watching.**
 
 ![License](https://img.shields.io/badge/license-Custom-blue?style=for-the-badge)
 ![GitHub issues](https://img.shields.io/github/issues/TheCommandCraft/Vanish-MinecraftPlugin?style=for-the-badge)
@@ -9,106 +11,152 @@
 
 </div>
 
-Vanish++ provides a clean, robust, and feature-rich way to manage vanished players on your server. Designed with performance and stability in mind, it's the perfect tool for staff who need to observe without being seen. From faking join/leave messages to silent container opening, Vanish++ handles all the small details to create a seamless and immersive stealth experience.
+---
 
-With instant, asynchronous saving, your vanished players' states are always safe, even through server crashes, all without causing any server lag.
+Are you tired of "vanish" plugins that leave traces? Players tab-completing your name? Arrows bouncing off your invisible body? Mobs looking strangely at "empty" air?
+
+**Vanish++** renders other vanish plugins obsolete. Built exclusively for modern **Paper** servers, it utilizes advanced packet interception, native physics manipulation, and deep API hooks to ensure you are **mathematically undetectable**.
+
+It works perfectly out of the box with zero configuration required, but offers granular control for those who need it.
 
 ---
 
-## ✨ Features
+## 🚀 Why Vanish++ is Unrivaled
 
 <details>
-<summary><b>🛡️ Core Vanish Functionality</b></summary>
+<summary><b>🛡️ The "Matrix" Physics Engine (True Intangibility)</b></summary>
+<br>
 
-- **Toggle Vanish:** Players with permission can become completely invisible to normal players using `/vanish`.
-- **Vanish Other Players:** Staff can vanish other players using `/vanish <player>`.
-- **Persistent Vanish:** A player's vanished state is saved instantly and persists through server restarts, crashes, and logouts.
-- **On-Join Re-Vanish:** Players who log off while vanished will automatically be put back into vanish when they rejoin.
+Most plugins just hide you visually. **Vanish++ removes you physically.**
+
+*   **Projectile Pass-Through:** We don't use "teleport hacks." Using native Paper events, arrows, tridents, and snowballs fly **physically through** your body. It is impossible to hit a vanished player.
+*   **Zero Collision:** You cannot push players, mobs, or boats, and they cannot push you. You are a ghost.
+*   **Mob Ignorance:** Mobs will never target you. You don't exist to their AI. *(Even if you hit them accidentally, they ignore you)*.
+*   **No Physical Triggers:** You can walk over Turtle Eggs, Crops, Pressure Plates, Tripwires, and Sculk Sensors without triggering a single vibration or block update.
+*   **Raid Prevention:** You won't trigger Bad Omen raids while watching a village.
+
 </details>
 
 <details>
-<summary><b>🎭 Visibility & Immersion</b></summary>
+<summary><b>📶 Deep Protocol Invisibility (Packet-Level Hiding)</b></summary>
+<br>
 
-- **Complete Invisibility:** Vanished players are hidden from the tab list, the server list player count (on ping), and are physically invisible.
-- **See Permission:** Players with the `vanishpp.see` permission can see vanished players, their tab list prefix, and receive special notifications.
-- **Vanish Prefix:** Vanished players have a configurable `[VANISHED]` prefix in the tab list, visible only to staff.
-- **Action Bar Indicator:** Vanished players see a persistent, configurable message on their action bar to remind them they are hidden.
-- **Fake Join/Leave Messages:** When a player vanishes, a "Player left the game" message is shown to normal players. When they unvanish, a "Player joined the game" message is shown. This uses the server's own translatable messages for maximum immersion across all languages.
-- **Silent Join/Quit:** Staff with `vanishpp.see` receive discreet "silent join/quit" messages when a vanished player connects or disconnects.
-- **Staff Notifications:** Staff are notified when another staff member uses the `/vanish` command on someone.
+We hook directly into the server protocol to scrub your existence from clients. *(Requires ProtocolLib)*
+
+*   **Nuclear Tab-Completion Scrubbing:** If a normal player tries to Tab-Complete your name in Chat, Vanilla Commands, or Plugin Commands, **you are not there**. Your name is stripped from the packet sent to the client.
+*   **Server List Hiding:** The player count in the multiplayer server list is mathematically adjusted. If you are the only one online, the server says "0/20".
+*   **Ghost View for Staff:** While normal players see nothing, Staff (with permission) see vanished players in the Tab List as **Gray, Italicized Spectators**, making it easy to coordinate.
+*   **Dynmap & EssentialsX Hooks:** Automatically hides you from dynamic web maps and `/who`, `/list`, or `/online` commands.
+
 </details>
 
 <details>
-<summary><b>👻 Gameplay Integration & Stealth</b></summary>
+<summary><b>👁️ Immersion & Compatibility</b></summary>
+<br>
 
-- **Block Trigger Prevention:** Vanished players will not trigger pressure plates, tripwires, or sculk sensors.
-- **Silent Chests:** Opening chests and other containers does not play the opening/closing animation for other players.
-- **Mob Spawning:** Vanished players do not affect mob spawning or mob caps around them.
-- **Silent Advancements:** Advancement announcement messages are hidden from normal players when earned by a vanished player.
-- **Silent Death Messages:** Death messages from vanished players are hidden from normal players.
-- **Hidden Chat:** Chat messages sent by a vanished player are only visible to other players with the `vanishpp.see` permission and are formatted with the vanish prefix.
+*   **Native Language Fake Messages:** When you vanish, the fake "Player left the game" message isn't just text—it uses the **server's native translation packet**. This means a German player sees the message in German, and a US player sees it in English. It is indistinguishable from a real disconnect.
+*   **Native TAB Plugin Support:** If you use **TAB (by NEZNAMY)**, Vanish++ hooks directly into it to display your vanish prefix automatically. No manual Placeholder configuration required.
+*   **Legacy Plugin Support:** Even without specific hooks, Vanish++ sets standard Bukkit Metadata (`"vanished"`). This means plugins like **CMI**, **TAB**, or custom skripts automatically respect your vanished status.
+*   **Silent Chests:** Open Chests, Shulker Boxes, Barrels, and Ender Chests silently. The lid animation **never plays** for others (utilizes temporary spectator switching).
+*   **Simple Voice Chat Integration:** Automatically isolates/mutes you in voice chat so you can't be heard or hear proximity chat while stalking.
+*   **Smart Item Pickup:** Toggle item pickup with `/vanishpickup`. Don't accidentally steal the diamonds you are watching a player mine.
+
 </details>
 
 <details>
-<summary><b>🚀 Technical & Performance Features</b></summary>
+<summary><b>🔧 Granular Control & Safety</b></summary>
+<br>
 
-- **Asynchronous Saving:** Configuration and vanish data are saved to disk on a separate thread the moment a player's state changes, ensuring no data loss from crashes and no lag on the main server thread.
-- **Robust State Management:** The plugin correctly handles edge cases like server restarts or crashes while a player is vanished, preventing glitched states (e.g., a visible player with a vanish prefix).
-- **Dynamic Permission Updates:** When a player is opped or de-opped, their ability to see vanished players is updated instantly without requiring a rejoin.
-- **High Performance:** Designed to be lightweight and have a minimal impact on server performance.
-</details>
+*   **Personal Rules System (`/vrules`):** Decide exactly what you want to do.
+    *   *Want to break blocks?* Toggle it.
+    *   *Want absolute peace?* Disable "Can Hit Entities".
+    *   *Afraid of leaking info?* Enable "Chat Confirmation".
+    *   *Need to drop items?* Enable "Can Drop Items".
+*   **Heartbeat Synchronization:** Changed a permission in LuckPerms? Promoted someone via Console? The **Heartbeat Task** refreshes visuals instantly. No relogging required.
+*   **Dependency Warnings:** The plugin intelligently warns admins if ProtocolLib is missing, but allows you to silence these warnings permanently with `/vignore`.
+*   **Accidental Chat Prevention:** If enabled, typing in chat blocks the message and asks you to confirm with `/vchat confirm`. Never leak your presence by accident again.
+*   **Async Data Persistence:** All data is saved asynchronously. Server crash? Restart? Your vanish state is saved instantly. No accidental logins.
 
-<details>
-<summary><b>🔧 Configuration</b></summary>
-
-- **Fully Configurable:** Nearly every feature, from messages and prefixes to gameplay effects, can be enabled, disabled, or customized in the `config.yml` file.
-- **Clear Data Separation:** The `config.yml` has a clear, decorative header separating user-configurable settings from the plugin's internal data storage to prevent accidental edits.
 </details>
 
 ---
 
 ## 📋 Commands
 
-| Command | Description | Permission |
+Most commands support an optional `[player]` argument, allowing admins to modify the state/rules of other staff members.
+
+| Command | Alias | Description | Permission |
+| :--- | :--- | :--- | :--- |
+| `/vanish [player]` | `/v`, `/sv` | Toggle vanish state. | `vanishpp.vanish` |
+| `/vrules [player] <rule> [val]` | `/vanishrules` | Configure physics/interaction rules. | `vanishpp.rules` |
+| `/vpickup [player]` | `/tipu` | Toggle item pickup. | `vanishpp.pickup` |
+| `/vignore [player]` | `/vanishignore` | Toggle start-up warnings. | `vanishpp.ignorewarning` |
+| `/vchat confirm` | `/vanishchat` | Confirm a chat message (if safety is on). | `vanishpp.chat` |
+| `/vlist` | `/vanishlist` | GUI-like list of online vanished players. | `vanishpp.list` |
+| `/vperms` | - | Manage permissions without a perm plugin. | `vanishpp.manageperms` |
+
+---
+
+## 🧩 Placeholders (PlaceholderAPI)
+
+Only needed if you are building custom HUDs or Scoreboards. (TAB Plugin works automatically without these).
+
+| Placeholder | Output Example | Description |
 | :--- | :--- | :--- |
-| `/vanish` or `/v` | Toggles your own vanish state. | `vanishpp.vanish` |
-| `/vanish <player>` | Toggles another player's vanish state. | `vanishpp.vanish.others` |
+| `%vanishpp_is_vanished%` | `Yes` / `No` | Current status text. |
+| `%vanishpp_is_vanished_bool%` | `true` / `false` | Boolean status for logic/conditions. |
+| `%vanishpp_vanished_count%` | `3` | Number of **online** vanished players. |
+| `%vanishpp_visible_online%` | `15` | Total players minus vanished players (Fake count). |
+| `%vanishpp_prefix%` | `[VANISHED]` | Configured prefix (empty if visible). |
+| `%vanishpp_pickup%` | `Enabled` | Current item pickup status. |
+| `%vanishpp_vanished_list%` | `Notch, Herobrine` | List of online vanished names. |
 
 ---
 
-## 🔒 Permissions
+## 🔒 Personal Rules (`/vrules`)
 
-| Permission | Description | Default |
-| :--- | :--- | :--- |
-| `vanishpp.vanish` | Allows using `/vanish` on oneself. | `op` |
-| `vanishpp.vanish.others` | Allows using `/vanish` on other players. | `op` |
-| `vanishpp.see` | Allows seeing vanished players, their chat, and special notifications. | `op` |
+Customize your ghost experience. Default behavior can be tweaked per player.
 
----
-
-## ⚙️ Setup & Configuration
-
-### Requirements
-- **Java 17** or newer
-- **Paper** (or a Paper fork like Purpur) for Minecraft 1.20.x or newer.
-  - *This plugin is **not** compatible with Spigot or Bukkit due to its use of modern Paper APIs.*
-
-### Installation
-1.  Download the latest release from the **Releases page**.
-2.  Drop the `Vanishpp.jar` file into your server's `plugins` folder.
-3.  Start or restart your server.
-4.  All configuration options can be found and modified in the generated `plugins/Vanishpp/config.yml` file.
+*   `can_break_blocks` (Default: `false` - Cannot break blocks)
+*   `can_place_blocks` (Default: `false` - Cannot place blocks)
+*   `can_interact` (Default: `true` - Chests, Buttons)
+*   `can_hit_entities` (Default: `false` - Prevents hitting players/mobs)
+*   `can_pickup_items` (Default: `false` - Cannot pick up items)
+*   `can_drop_items` (Default: `false` - Cannot drop items from inventory)
+*   `can_chat` (Default: `false` - Requires confirmation to speak)
+*   `can_trigger_physical` (Default: `false` - Pressure plates, crops, etc.)
+*   `mob_targeting` (Default: `false` - Mobs ignore you)
 
 ---
 
-## 🐞 Bug Reports & Suggestions
+## ⚙️ Installation & Requirements
 
-Have a feature request or found a bug? Please **open an issue** on this repository. Your feedback is greatly appreciated!
+Vanish++ is built on modern architecture. It leaves "legacy" bloat behind.
 
-Please note that as this is a closed-source project, code contributions via Pull Requests cannot be accepted at this time.
+1.  **Requirements:**
+    *   **Java 21+**
+    *   **Paper 1.21+** (or forks like Purpur). *Spigot is NOT supported.*
+2.  **Highly Recommended:**
+    *   **ProtocolLib** (Required for Tab-Scrubbing, Server List Hiding, and Spectator View).
+3.  **Optional Hooks:**
+    *   **TAB (NEZNAMY)** (Native Support)
+    *   PlaceholderAPI
+    *   Dynmap
+    *   EssentialsX
+    *   Simple Voice Chat
 
-## 📄 License
+**Just drop the JAR in your plugins folder.** No complex setup required. It works securely out of the box.
 
-This is a closed-source project. All rights are reserved.
+---
 
-The compiled plugin is provided for use under the terms of the custom license. You may not copy, modify, or redistribute the software unless explicitly allowed. Please see the [**LICENSE**](LICENSE) file for the full terms of use.
+<div align="center">
+
+### 📄 License & Support
+
+This project is closed-source.
+Report bugs via the **Issues** tab.
+
+**[ Download Now ]**
+*And become truly invisible.*
+
+</div>
